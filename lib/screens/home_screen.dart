@@ -27,8 +27,8 @@ class HomeScreen extends StatelessWidget {
       child: Scaffold(
         body: Container(
            margin: EdgeInsets.symmetric(
-             horizontal: Sizes.MARGIN_16,
-             vertical: Sizes.MARGIN_8,
+             //horizontal: Sizes.MARGIN_16,
+             //vertical: Sizes.MARGIN_16,
            ),
               child: ListView(
                 children: <Widget>[
@@ -92,7 +92,7 @@ class HomeScreen extends StatelessWidget {
                       );
                     }),
               ),
-              SizedBox(height: 16.0),
+              //SizedBox(height: 16.0),
               // HeadingRow(
               //   title: StringConst.CATEGORY,
               //   number: StringConst.SEE_ALL_9,
@@ -138,7 +138,6 @@ class HomeScreen extends StatelessWidget {
       );
   }
 
-  getClipper() {}
 
   // List<Widget> createUserProfilePhotos({@required numberOfProfilePhotos}) {
   //   List<Widget> profilePhotos = [];

@@ -123,6 +123,7 @@ class CategoryDetailScreen extends StatelessWidget {
                       status: status[index],
                       cardTitle: restaurantNames[index],
                       rating: ratings[index],
+                      price: price[index],
                       category: category[index],
                       distance: distance[index],
                       address: addresses[index],

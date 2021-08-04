@@ -242,7 +242,23 @@ class RestaurantDetailsScreen extends StatelessWidget {
                                     TextSpan(text: "9:30 am to 11:30 am "),
                                   ],
                                 ),
-                              )
+                              ),
+                              SizedBox(height: 12.0),
+                              Text(
+                                   "Rs 35",
+                                  textAlign: TextAlign.right,
+                                  style: TextStyle(decoration: TextDecoration.lineThrough,
+                                    color: AppColors.headingText,
+                                    fontWeight: FontWeight.w600,
+                                    fontSize: Sizes.TEXT_SIZE_14,)),
+                              Text(
+                                  "Rs 12",
+                                  textAlign: TextAlign.right,
+                                style: TextStyle(
+                                  color: AppColors.headingText,
+                                  fontWeight: FontWeight.w600,
+                                  ),
+                                 ),
                             ],
                           ),
                           SpaceH24(),
@@ -293,7 +309,7 @@ class RestaurantDetailsScreen extends StatelessWidget {
                 ),
               ),
               PotbellyButton(
-                'Rate Your Experience ',
+                'Check Out ',
                 onTap: () =>
                     AppRouter.navigator.pushNamed(AppRouter.addRatingsScreen),
                 buttonHeight: 65,

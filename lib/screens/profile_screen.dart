@@ -57,7 +57,11 @@ class ProfileScreen extends StatelessWidget {
                   ),
                   ProfileListItem(
                     icon: LineAwesomeIcons.history,
-                    text: 'Purchase History',
+                    text: 'Payments',
+                  ),
+                  ProfileListItem(
+                    icon: LineAwesomeIcons.user_plus,
+                    text: 'Rewards',
                   ),
                   ProfileListItem(
                     icon: LineAwesomeIcons.question_circle,
@@ -66,10 +70,6 @@ class ProfileScreen extends StatelessWidget {
                   ProfileListItem(
                     icon: LineAwesomeIcons.cog,
                     text: 'Settings',
-                  ),
-                  ProfileListItem(
-                    icon: LineAwesomeIcons.user_plus,
-                    text: 'Invite a Friend',
                   ),
                   ProfileListItem(
                     icon: LineAwesomeIcons.alternate_sign_out,

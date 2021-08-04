@@ -262,6 +262,16 @@ class FoodyBiteCard extends StatelessWidget {
                             SizedBox(width: Sizes.WIDTH_4),
                             Text(
                               StringConst.PRICE,
+                              style: TextStyle(
+                                decoration: TextDecoration.lineThrough,
+                                color: AppColors.headingText,
+                                fontWeight: FontWeight.w600,
+                                fontSize: Sizes.TEXT_SIZE_14,
+                              ),
+                            ),
+                            SizedBox(width: Sizes.WIDTH_4),
+                            Text(
+                              StringConst.PRICE,
                               style: Styles.customTitleTextStyle(
                                 color: AppColors.headingText,
                                 fontWeight: FontWeight.w600,

@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "698072773159",
-    "firebase_url": "https://gofoodman-83f59-default-rtdb.firebaseio.com",
-    "project_id": "gofoodman-83f59",
-    "storage_bucket": "gofoodman-83f59.appspot.com"
+    "project_number": "457045356044",
+    "firebase_url": "https://gofoodmancust-default-rtdb.firebaseio.com",
+    "project_id": "gofoodmancust",
+    "storage_bucket": "gofoodmancust.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:698072773159:android:df15bf30956dbbbc9f1402",
+        "mobilesdk_app_id": "1:457045356044:android:992e3ae2c270094c318829",
         "android_client_info": {
           "package_name": "com.davidcobbina.potbelly"
         }
       },
       "oauth_client": [
         {
-          "client_id": "698072773159-j1t928591rt7q1dhi08of7aaeftr0nhm.apps.googleusercontent.com",
+          "client_id": "457045356044-nsq50cea5v12731q7h3gapnlcaqo5qvf.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyA_kNWCV-DqEEuXIUIl-Wxd__5ea8jtFg0"
+          "current_key": "AIzaSyBy2dKMomo7OfRMi57FQb9nIIZhFhpQq_E"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "698072773159-j1t928591rt7q1dhi08of7aaeftr0nhm.apps.googleusercontent.com",
+              "client_id": "457045356044-nsq50cea5v12731q7h3gapnlcaqo5qvf.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

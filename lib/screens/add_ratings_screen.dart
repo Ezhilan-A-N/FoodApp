@@ -43,7 +43,7 @@ class _AddRatingsScreenState extends State<AddRatingsScreen> {
           ),
           centerTitle: true,
           title: Text(
-            'Review & Ratings',
+            'Transaction Page',
             style: Styles.customTitleTextStyle(
               color: AppColors.headingText,
               fontWeight: FontWeight.w600,
@@ -60,47 +60,47 @@ class _AddRatingsScreenState extends State<AddRatingsScreen> {
             ),
           ],
         ),
-        body: Container(
-          margin: EdgeInsets.only(
-            top: Sizes.MARGIN_16,
-          ),
-          child: Column(
-            children: <Widget>[
-              RatingsBar(hasTitle: false),
-              SpaceH30(),
-              Container(
-                margin: EdgeInsets.symmetric(horizontal: Sizes.MARGIN_30),
-                child: CustomTextFormField(
-                  hasPrefixIcon: false,
-                  maxLines: 10,
-                  hintText: "Write your experience",
-                  hintTextStyle: subTitleTextStyle,
-                  borderWidth: Sizes.WIDTH_1,
-                  borderRadius: Sizes.RADIUS_12,
-                  borderStyle: BorderStyle.solid,
-                  focusedBorderColor: AppColors.indigo,
-                  textFormFieldStyle: textTheme.body1,
-                  contentPaddingHorizontal: Sizes.MARGIN_16,
-                ),
-              ),
-              Expanded(
-                child: Align(
-                  alignment: Alignment.bottomCenter,
-                  child: PotbellyButton(
-                    'Done',
-                    onTap: () => AppRouter.navigator.pop(),
-                    buttonHeight: 65,
-                    buttonWidth: MediaQuery.of(context).size.width,
-                    decoration: Decorations.customHalfCurvedButtonDecoration(
-                      topleftRadius: Sizes.RADIUS_24,
-                      topRightRadius: Sizes.RADIUS_24,
-                    ),
-                  ),
-                ),
-              ),
-            ],
-          ),
-        ),
+        // body: Container(
+        //   margin: EdgeInsets.only(
+        //     top: Sizes.MARGIN_16,
+        //   ),
+        //   child: Column(
+        //     children: <Widget>[
+        //       RatingsBar(hasTitle: false),
+        //       SpaceH30(),
+        //       Container(
+        //         margin: EdgeInsets.symmetric(horizontal: Sizes.MARGIN_30),
+        //         child: CustomTextFormField(
+        //           hasPrefixIcon: false,
+        //           maxLines: 10,
+        //           hintText: "Write your experience",
+        //           hintTextStyle: subTitleTextStyle,
+        //           borderWidth: Sizes.WIDTH_1,
+        //           borderRadius: Sizes.RADIUS_12,
+        //           borderStyle: BorderStyle.solid,
+        //           focusedBorderColor: AppColors.indigo,
+        //           textFormFieldStyle: textTheme.body1,
+        //           contentPaddingHorizontal: Sizes.MARGIN_16,
+        //         ),
+        //       ),
+        //       Expanded(
+        //         child: Align(
+        //           alignment: Alignment.bottomCenter,
+        //           child: PotbellyButton(
+        //             'Done',
+        //             onTap: () => AppRouter.navigator.pop(),
+        //             buttonHeight: 65,
+        //             buttonWidth: MediaQuery.of(context).size.width,
+        //             decoration: Decorations.customHalfCurvedButtonDecoration(
+        //               topleftRadius: Sizes.RADIUS_24,
+        //               topRightRadius: Sizes.RADIUS_24,
+        //             ),
+        //           ),
+        //         ),
+        //       ),
+        //     ],
+        //   ),
+        // ),
       ),
     );
   }
