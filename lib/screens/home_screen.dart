@@ -7,6 +7,7 @@ import 'package:potbelly/widgets/category_card.dart';
 import 'package:potbelly/widgets/foody_bite_card.dart';
 import 'package:potbelly/widgets/heading_row.dart';
 import 'package:potbelly/widgets/search_input_field.dart';
+import 'package:potbelly/widgets/spaces.dart';
 
 class HomeScreen extends StatelessWidget {
   static const int TAB_NO = 0;
@@ -17,145 +18,130 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        FocusScopeNode currentFocus = FocusScope.of(context);
-        if (!currentFocus.hasPrimaryFocus) {
-          currentFocus.unfocus();
-        }
-      },
+    return SafeArea(
       child: Scaffold(
         body: Container(
-           margin: EdgeInsets.symmetric(
-             //horizontal: Sizes.MARGIN_16,
-             //vertical: Sizes.MARGIN_16,
-           ),
-              child: ListView(
-                children: <Widget>[
+            margin: const EdgeInsets.only(
+              left: Sizes.MARGIN_16,
+              right: Sizes.MARGIN_16,
+              top: Sizes.MARGIN_16,
+            ),
+            child: Column(
+              children: [
                 FoodyBiteSearchInputField(
-                ImagePath.searchIcon,
-                controller: controller,
-                textFormFieldStyle:
-                    Styles.customNormalTextStyle(color: AppColors.accentText),
-                hintText: StringConst.HINT_TEXT_HOME_SEARCH_BAR,
-                hintTextStyle:
-                    Styles.customNormalTextStyle(color: AppColors.accentText),
-                suffixIconImagePath: ImagePath.settingsIcon,
-                borderWidth: 0.0,
-                onTapOfLeadingIcon: () => AppRouter.navigator.pushNamed(
-                  AppRouter.searchResultsScreen,
-                  arguments: SearchValue(
-                    controller.text,
+                  ImagePath.searchIcon,
+                  controller: controller,
+                  textFormFieldStyle:
+                  Styles.customNormalTextStyle(color: AppColors.accentText),
+                  hintText: StringConst.HINT_TEXT_HOME_SEARCH_BAR,
+                  hintTextStyle:
+                  Styles.customNormalTextStyle(color: AppColors.accentText),
+                  suffixIconImagePath: ImagePath.settingsIcon,
+                  borderWidth: 0.0,
+                  onTapOfLeadingIcon: () => AppRouter.navigator.pushNamed(
+                    AppRouter.searchResultsScreen,
+                    arguments: SearchValue(
+                      controller.text,
+                    ),
                   ),
+                  onTapOfSuffixIcon: () =>
+                      AppRouter.navigator.pushNamed(AppRouter.filterScreen),
+                  borderStyle: BorderStyle.solid,
                 ),
-                onTapOfSuffixIcon: () =>
-                    AppRouter.navigator.pushNamed(AppRouter.filterScreen),
-                borderStyle: BorderStyle.solid,
-              ),
-              SizedBox(height: 16.0),
-              HeadingRow(
-                title: StringConst.TRENDING_RESTAURANTS,
-                number: StringConst.SEE_ALL_45,
-                onTapOfNumber: () => AppRouter.navigator
-                    .pushNamed(AppRouter.trendingRestaurantsScreen),
-              ),
-              SizedBox(height: 16.0),
-              Container(
-                height: 410,
-                width: MediaQuery.of(context).size.width,
-                child: ListView.builder(
+                Container(
+                  height: 430,
+                  child: ListView.separated(
                     scrollDirection: Axis.vertical,
                     itemCount: 4,
+                    separatorBuilder: (context, index) {
+                      return SpaceH8();
+                    },
                     itemBuilder: (context, index) {
                       return Container(
-                        margin: EdgeInsets.only(right: 4.0),
                         child: FoodyBiteCard(
-                          onTap: () => AppRouter.navigator.pushNamed(
-                            AppRouter.restaurantDetailsScreen,
-                            arguments: RestaurantDetails(
-                              imagePath: imagePaths[index],
-                              restaurantName: restaurantNames[index],
-                              restaurantAddress: addresses[index],
-                              rating: ratings[index],
-                              category: category[index],
-                              distance: distance[index],
-                            ),
-                          ),
+                          onTap: () =>
+                              AppRouter.navigator.pushNamed(
+                                AppRouter.restaurantDetailsScreen,
+                                arguments: RestaurantDetails(
+                                  imagePath: imagePaths[index],
+                                  restaurantName: restaurantNames[index],
+                                  restaurantAddress: addresses[index],
+                                  rating: ratings[index],
+                                  category: category[index],
+                                  distance: distance[index],
+                                ),
+                              ),
                           imagePath: imagePaths[index],
                           status: status[index],
                           cardTitle: restaurantNames[index],
                           rating: ratings[index],
+                          //bookmark: true,
                           category: category[index],
                           distance: distance[index],
                           address: addresses[index],
                         ),
                       );
-                    }),
-              ),
-              //SizedBox(height: 16.0),
-              // HeadingRow(
-              //   title: StringConst.CATEGORY,
-              //   number: StringConst.SEE_ALL_9,
-              //   onTapOfNumber: () =>
-              //       AppRouter.navigator.pushNamed(AppRouter.categoriesScreen),
-              // ),
-          //     SizedBox(height: 16.0),
-          //     Container(
-          //       height: 100,
-          //       child: ListView.builder(
-          //         scrollDirection: Axis.horizontal,
-          //         itemCount: categoryImagePaths.length,
-          //         itemBuilder: (context, index) {
-          //           return Container(
-          //             margin: EdgeInsets.only(right: 8.0),
-          //             child: FoodyBiteCategoryCard(
-          //               imagePath: categoryImagePaths[index],
-          //               gradient: gradients[index],
-          //               category: category[index],
-          //             ),
-          //           );
-          //         },
-          //       ),
-          //     ),
-          //     SizedBox(height: 16.0),
-          //     HeadingRow(
-          //       title: StringConst.FRIENDS,
-          //       number: StringConst.SEE_ALL_56,
-          //       onTapOfNumber: () => AppRouter.navigator.pushNamed(
-          //         AppRouter.findFriendsScreen,
-          //       ),
-          //     ),
-          //     SizedBox(height: 16.0),
-          //     Row(
-          //       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          //       children: createUserProfilePhotos(numberOfProfilePhotos: 6),
-          //     ),
-          //     SizedBox(height: 16.0),
-                ],
-               ),
-             ),
+                    },
+                  ),
+                ),
+              ],
+            ),
+
+
+
+//        ListView(
+//          scrollDirection: Axis.vertical,
+//          children: <Widget>[
+//            FoodyBiteCard(
+//              imagePath: ImagePath.breakfastInBed,
+//              status: StringConst.STATUS_OPEN,
+//              cardTitle: "Happy Bones",
+//              category: StringConst.ITALIAN,
+//              distance: "12 km",
+//              address: "394 Broome St, New York, NY 10013, USA",
+//              bookmark: true,
+//              onTap: () => navigateToDetailScreen(),
+//            ),
+//            SizedBox(height: Sizes.WIDTH_16),
+//            FoodyBiteCard(
+//              imagePath: ImagePath.dinnerIsServed,
+//              status: StringConst.STATUS_OPEN,
+//              rating: "4.8",
+//              cardTitle: "Pappas Pizza",
+//              category: StringConst.CHINESE,
+//              distance: "2 km",
+//              address: "917 Zoom St, California, CA 20093, USA",
+//              bookmark: true,
+//              onTap: () => navigateToDetailScreen(),
+//            ),
+//            SizedBox(height: Sizes.WIDTH_16),
+//            FoodyBiteCard(
+//              imagePath: ImagePath.breakfastInBed,
+//              status: StringConst.STATUS_CLOSE,
+//              rating: "3.7",
+//              cardTitle: "Shantell's",
+//              category: StringConst.ITALIAN,
+//              distance: "4 km",
+//              address: "34 Devil St, New York, NY 11013, USA",
+//              bookmark: true,
+//              onTap: () => navigateToDetailScreen(),
+//            ),
+//            SizedBox(height: Sizes.WIDTH_16),
+//            FoodyBiteCard(
+//              imagePath: ImagePath.dinnerIsServed,
+//              status: StringConst.STATUS_CLOSE,
+//              rating: "2.3",
+//              cardTitle: "Dragon Heart",
+//              category: StringConst.CHINESE,
+//              distance: "5 km",
+//              address: "417 Doom St, California, CA 90013, USA",
+//              bookmark: true,
+//              onTap: () => navigateToDetailScreen(),
+//            ),
+//          ],
+//        ),
         ),
-      );
+      ),
+    );
   }
-
-
-  // List<Widget> createUserProfilePhotos({@required numberOfProfilePhotos}) {
-  //   List<Widget> profilePhotos = [];
-  //   List<String> imagePaths = [
-  //     ImagePath.profile1,
-  //     ImagePath.profile2,
-  //     ImagePath.profile3,
-  //     ImagePath.profile4,
-  //     ImagePath.profile1,
-  //     ImagePath.profile2,
-  //   ];
-  //
-  //   List<int> list = List<int>.generate(numberOfProfilePhotos, (i) => i + 1);
-  //
-  //   list.forEach((i) {
-  //     profilePhotos
-  //         .add(CircleAvatar(backgroundImage: AssetImage(imagePaths[i - 1])));
-  //   });
-  //   return profilePhotos;
-  // }
 }

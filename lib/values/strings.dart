@@ -13,6 +13,7 @@ class StringConst {
 
   static const String HINT_TEXT_NAME = "Name";
   static const String HINT_TEXT_EMAIL = "Email";
+  static const String HINT_TEXT_PHONE = "Email";
   static const String HINT_TEXT_PASSWORD = "Password";
   static const String HINT_TEXT_CONFIRM_PASSWORD = "Confirm Password";
   static const String HINT_TEXT_HOME_SEARCH_BAR = "Find Restaurants";

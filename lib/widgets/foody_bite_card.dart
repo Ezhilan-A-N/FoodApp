@@ -117,38 +117,38 @@ class FoodyBiteCard extends StatelessWidget {
                               Spacer(
                                 flex: 1,
                               ),
-                              bookmark
-                                  ? Container()
-                                  : Container(
-                                      width: 40,
-                                      height: 20,
-                                      child: Stack(
-                                        alignment: Alignment.centerLeft,
-                                        children: [
-                                          Positioned(
-                                            left: 21,
-                                            child: Image.asset(
-                                              ImagePath.cardImage1,
-                                              fit: BoxFit.none,
-                                            ),
-                                          ),
-                                          Positioned(
-                                            left: 12,
-                                            child: Image.asset(
-                                              ImagePath.cardImage2,
-                                              fit: BoxFit.none,
-                                            ),
-                                          ),
-                                          Positioned(
-                                            left: 0,
-                                            child: Image.asset(
-                                              ImagePath.cardImage1,
-                                              fit: BoxFit.none,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
+                              // bookmark
+                              //     ? Container()
+                              //     : Container(
+                              //         width: 40,
+                              //         height: 20,
+                              //         child: Stack(
+                              //           alignment: Alignment.centerLeft,
+                              //           children: [
+                              //             Positioned(
+                              //               left: 21,
+                              //               child: Image.asset(
+                              //                 ImagePath.cardImage1,
+                              //                 fit: BoxFit.none,
+                              //               ),
+                              //             ),
+                              //             Positioned(
+                              //               left: 12,
+                              //               child: Image.asset(
+                              //                 ImagePath.cardImage2,
+                              //                 fit: BoxFit.none,
+                              //               ),
+                              //             ),
+                              //             Positioned(
+                              //               left: 0,
+                              //               child: Image.asset(
+                              //                 ImagePath.cardImage1,
+                              //                 fit: BoxFit.none,
+                              //               ),
+                              //             ),
+                              //           ],
+                              //         ),
+                              //       ),
                             ],
                           ),
                           SizedBox(height: 12.0),

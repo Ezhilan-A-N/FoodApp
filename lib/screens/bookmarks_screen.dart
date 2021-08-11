@@ -66,7 +66,7 @@ class BookmarksScreen extends StatelessWidget {
                   status: status[index],
                   cardTitle: restaurantNames[index],
                   rating: ratings[index],
-                  bookmark: true,
+                  //bookmark: true,
                   category: category[index],
                   distance: distance[index],
                   address: addresses[index],

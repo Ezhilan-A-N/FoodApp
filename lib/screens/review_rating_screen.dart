@@ -29,7 +29,7 @@ class ReviewRatingScreen extends StatelessWidget {
         ),
         centerTitle: true,
         title: Text(
-          'Review & Ratings',
+          'Transaction Page',
           style: Styles.customTitleTextStyle(
             color: AppColors.headingText,
             fontWeight: FontWeight.w600,

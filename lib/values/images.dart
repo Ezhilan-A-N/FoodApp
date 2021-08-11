@@ -71,8 +71,8 @@ class ImagePath {
   static const String profile4 = "$imageDir/profile_4.png";
 
 
-  static const String cardImage1 = "$imageDir/card_image_1.png";
-  static const String cardImage2 = "$imageDir/card_image_2.png";
+  //static const String cardImage1 = "$imageDir/card_image_1.png";
+  //static const String cardImage2 = "$imageDir/card_image_2.png";
 
   //Users
   static const String branson = "$imageDir/branson.png";

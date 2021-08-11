@@ -55,6 +55,7 @@ class RestaurantDetailsScreen extends StatelessWidget {
     bottomRightRadius: 24,
   );
 
+
   @override
   Widget build(BuildContext context) {
 //    final RestaurantDetails args = ModalRoute.of(context).settings.arguments;
@@ -244,23 +245,34 @@ class RestaurantDetailsScreen extends StatelessWidget {
                                 ),
                               ),
                               SizedBox(height: 12.0),
-                              Text(
-                                   "Rs 35",
-                                  textAlign: TextAlign.right,
-                                  style: TextStyle(decoration: TextDecoration.lineThrough,
-                                    color: AppColors.headingText,
-                                    fontWeight: FontWeight.w600,
-                                    fontSize: Sizes.TEXT_SIZE_14,)),
-                              Text(
-                                  "Rs 12",
-                                  textAlign: TextAlign.right,
-                                style: TextStyle(
-                                  color: AppColors.headingText,
-                                  fontWeight: FontWeight.w600,
-                                  ),
-                                 ),
+
                             ],
                           ),
+                          Container(
+                            margin: EdgeInsets.only(
+                                left:290.0),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.end,
+                              children: <Widget>[
+                                Text(
+                                    "Rs 35",
+                                    //textAlign: TextAlign.right,
+                                    style: TextStyle(decoration: TextDecoration.lineThrough,
+                                      color: AppColors.headingText,
+                                      fontWeight: FontWeight.w600,
+                                      fontSize: Sizes.TEXT_SIZE_14,)),
+                                Text(
+                                  "Rs 12",
+                                  //textAlign: TextAlign.right,
+                                  style: TextStyle(
+                                    color: AppColors.headingText,
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+
                           SpaceH24(),
                           // HeadingRow(
                           //   title: StringConst.MENU_AND_PHOTOS,

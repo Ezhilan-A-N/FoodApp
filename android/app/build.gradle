@@ -46,7 +46,7 @@ android {
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId "com.davidcobbina.potbelly"
-        minSdkVersion 16
+        minSdkVersion 23
         targetSdkVersion 29
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
@@ -76,10 +76,11 @@ flutter {
 }
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    //implementation "androidx.browser:browser:1.3.0"
-    //implementation platform('com.google.firebase:firebase-bom:28.2.1')
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'com.google.firebase:firebase-analytics:17.4.1'
+    implementation 'com.google.firebase:firebase-crashlytics:17.0.0'
+    implementation 'com.google.firebase:firebase-core:11.4.2'
+    implementation 'com.google.firebase:firebase-messaging:20.2.4'
 }

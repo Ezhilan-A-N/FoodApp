@@ -128,6 +128,14 @@ class RegisterScreen extends StatelessWidget {
         SpaceH16(),
         CustomTextFormField(
           hasPrefixIcon: true,
+          prefixIconImagePath: ImagePath.personIcon,
+          hintText: StringConst.HINT_TEXT_PHONE,
+          borderStyle: BorderStyle.solid,
+          borderWidth: 0.0,
+        ),
+        SpaceH16(),
+        CustomTextFormField(
+          hasPrefixIcon: true,
           prefixIconImagePath: ImagePath.passwordIcon,
           hintText: StringConst.HINT_TEXT_PASSWORD,
           obscured: true,
